@@ -225,4 +225,21 @@ footer p {
         margin-top: 25px;
     }
 }
+
+#active{
+    border: 3px solid pink;
+}
+
+
+/* Start Styles specific to contact page */
+.contact-grid {
+
+}
+
+.contact-grid img.card-img {
+    width: 100px;
+}
+
+/* End Styles specific to contact page */
+
             
