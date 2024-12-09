@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Whitewater Rafting Vacations | Dry Oar Boating | Home</title>
+    <title>Contact Us</title>
+    <style>
+        
+        #feedback {
+            background-color: antiquewhite;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 0.5em;
+            display: none;
+        }
+        .moveDown {
+            margin-top: 3em;
+        }
+    </style>
 </head>
 <body>
     <div id="content">
@@ -15,45 +30,30 @@
             </a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="servives.html">Products/services</a>
+                <a href="services.html">Products/Services</a>
                 <a href="site-plan-rafting.html">Site Plan</a>
                 <a href="contactus.html">Contact Us</a>
             </nav>
         </header>
-        <div id="hero">
-            <div id="hero-box">
-                <img id="hero-img" src="images/hero.png" alt="People enjoying white water rafting">
-            </div>
-            <section id="hero-msg">
-                <h1 class="home-title">Have An Adventure</h1>
-                <h4>Make Memories with Dry Oar</h4>
-                <div class='button-box'>
-                    <a class='book' href="contactus.html">Book Now</a>
-                </div>
-            </section>
-        </div>
-        <main class="home-grid">
-            <section class="rivers-card">
-                <img class="card-img" src="images/rivers.jpg" alt="river in forest">
-                <img class="icon" src="images/river_icon.png" alt="river icon">
-                <h2>Rivers</h2>
-            </section>
-            <section class="camping-card">
-                <img class="card-img" src="images/camping.jpg" alt="tent in mountains">
-                <img class="icon" src="images/fire_icon.png" alt="fire icon">
-                <h2>Camping</h2>
-            </section>
-            <section class="rapids-card">
-                <img class="card-img" src="images/rapids.jpg" alt="rafting boat">
-                <img class="icon" src="images/oars.png" alt="oars icon">
-                <h2>Rapids</h2>
-            </section>
-            <img class="mountains" src="images/mountains.jpg" alt="Misty mountains">
-            <section class="msg">
-                <h2>More Than Just The Thrill</h2>
-                <p>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors.</p>
-                <a class='join' href="rivers.html">Join Us</a>
-            </section>
+        <main class = "form">
+            <div id="feedback"></div>
+            <form>
+                <p>
+                    <label for="user_name">Name:</label>
+                    <input type="text" id="user_name" name="user_name" required>
+                </p>
+                <p>
+                    <label for="user_email">Email:</label>
+                    <input type="email" id="user_email" name="user_email" required>
+                </p>
+                <p>
+                    <label for="user_message">Message:</label>
+                    <textarea id="user_message" name="user_message" rows="4" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
         </main>
         <footer>
             <p>Dry Oar &copy; 2024 - Kobe Dereck Hill</p>
@@ -71,8 +71,28 @@
                 </a>
             </div>
         </footer>
-    </div> 
+    </div>
+    <script>
+        // Get the feedback div element
+        const feedbackElement = document.getElementById('feedback');
+        // Get the form element
+        const formElement = document.forms[0];
+        // Add a listener for form submission
+        formElement.addEventListener('submit', function(e) {
+            // Prevent the form's default action
+            e.preventDefault();
+            // Set feedback message with the user's name
+            feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + 
+                '! Thank you for your message. We will get back with you as soon as possible!';
+            // Make the feedback element visible
+            feedbackElement.style.display = "block";
+            // Move everything down to prevent overlap
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
 </body>
-
 </html>
+
+
+
 
