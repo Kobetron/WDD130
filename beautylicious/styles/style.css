@@ -1,35 +1,62 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-size: 24px;
+    margin: auto;
+    padding: auto;
+    background-color: #d0a2697c;
 }
 
 header {
-    background-color: #a97a14;
-    color: white;
+    background-color: #f8f8f8;
+    color: rgb(255, 255, 255);
     padding: 10px 0;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    padding-left: 600px;
+    
 }
 
 header nav ul {
     list-style: none;
     text-align: center;
+    display: inline-block;
 }
 
 header nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 50px;
+    
 }
 
 header nav ul li a {
-    color: white;
+    color: #a97a14;
     text-decoration: none;
 }
+
+nav a:hover {
+    background-color: #a97a14;
+    color: #000000;
+}
+
 
 .icon {
     width: 80px;
     padding-top: 10px;
 }
+
+.haircutimage {
+    width: 1600px;
+    opacity: 40%;
+    
+}
+
 
 section {
     padding: 20px;
@@ -43,10 +70,11 @@ section {
 
 .button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #a97a14;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .projects {
@@ -66,7 +94,7 @@ section {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #333;
     color: white;
 }
@@ -77,8 +105,10 @@ footer {
     background-color: #a97a14;
     color: rgb(0, 0, 0);
     padding: 16px;
-    font-size: 16px;
+    font-size: 24px;
     border: none;
+    border-radius: 5px;
+
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -105,11 +135,8 @@ footer {
     display: block;
   }
   
-  /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd;}
   
-  /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #ffffff;}
