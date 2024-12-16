@@ -165,6 +165,12 @@ footer {
     color: white;
 }
 
+.footer-link a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    font-size: 14px;
+}
+
 footer .social a {
     margin: 0 10px;
     display: inline-block;
